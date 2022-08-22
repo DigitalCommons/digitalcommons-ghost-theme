@@ -1,0 +1,15 @@
+{{!< default}}
+
+<main class="site-main">
+
+  {{#page}}
+    <article class="post-content {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+      <header class="post-content-header"><h1 class="post-content-title">{{title}}</h1></header>
+	{{#if feature_image}}<div class="post-content-image">
+	  <img class="kg-image" src="{{feature_image}}" alt="{{title}}" /></div>
+	{{/if}}
+      <div class="post-content-body">{{content}}</div>
+    </article>
+  {{/page}}
+
+</main>
