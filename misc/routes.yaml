@@ -1,4 +1,7 @@
 routes:
+  /:
+    data: page.home
+    template: home
 
 collections:
   /blog/:
