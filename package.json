@@ -1,6 +1,6 @@
 {
-    "name": "edition",
-    "description": "A clean, minimal newsletter theme for the Ghost publishing platform",
+    "name": "digitalcommons.coop",
+    "description": "The digitialcommons.coop site theme, adapted from Edition",
     "version": "1.0.0",
     "private": true,
     "engines": {
