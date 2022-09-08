@@ -1,0 +1,26 @@
+<article class="feed dc-square-page {{post_class}}" data-month="{{date format="MMMM YYYY"}}">
+
+    {{#match @custom.feed_layout "!=" "Text-only"}}
+    {{#match @custom.feed_layout "!=" "Minimal"}}
+        {{#if feature_image}}
+            <figure class="dc-square-page-image u-placeholder square">
+                    <img
+                        class="u-object-fit"
+                        srcset="{{> "srcset"}}"
+                        sizes="(min-width: 576px) 160px, 90vw"
+                        src="{{img_url feature_image size="m"}}"
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                        loading="lazy"
+                        >
+            </figure>
+        {{else}}
+            <div class="dc-square-page-noimage u-placeholder square"><div class="u-object-fit"></div></div>
+        {{/if}}
+        <h2 class="dc-square-page-title">{{title}}</h2>
+        {{#if excerpt}}<div class="dc-square-page-caption">{{excerpt words="20"}}</div>{{/if}}
+    {{/match}}
+    {{/match}}
+
+    <a class="u-permalink" href="{{url}}" aria-label="{{title}}"></a>
+
+</article>

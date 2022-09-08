@@ -19,30 +19,30 @@
                 {{content}}
                 <hr>
 
-                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
+                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed dc-canvas-3">
                     {{#get "pages" filter="featured:true"}}
                     {{#foreach pages}}
-                        {{> "loop"}}
+                        {{> "square-page"}}
                     {{/foreach}}
                     {{/get}}
                 </div>
 
                 <h2>Our Tools</h2>
 
-                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
+                <div class="gh-feed dc-canvas-3">
                     {{#get "pages" filter="tag:tools"}}
                     {{#foreach pages}}
-                        {{> "loop"}}
+                        {{> "square-page"}}
                     {{/foreach}}
                     {{/get}}
                 </div>
-                
+
                 <h2>Our News</h2>
 
-                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
+                <div class="gh-feed dc-canvas-3">
                     {{#get "posts"}}
                     {{#foreach posts}}
-                        {{> "loop"}}
+                        {{> "square-page"}}
                     {{/foreach}}
                     {{/get}}
                 </div>

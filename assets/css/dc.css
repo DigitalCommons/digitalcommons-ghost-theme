@@ -1,0 +1,50 @@
+/* Digital commons styles */
+
+article h1, article h2, article h3 {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.dc-canvas-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.dc-square-page {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "image" "caption";
+  overflow: hidden;
+  position: relative;
+  line-height: 1;
+  padding: 0 !important;
+}
+
+.dc-square-page-noimage {
+  width: 100%;
+  grid-area: image;
+  border: solid 1px;
+}
+
+.dc-square-page-image {
+  width: 100%;
+  grid-area: image;
+}
+
+.dc-square-page-title {
+  grid-area: image;
+  z-index: 10;
+  justify-self: center;
+  align-self: center;
+  text-shadow: 0 0 0.5rem white;
+}
+
+.dc-square-page-caption {
+  grid-area: caption;
+  justify-self: stretch;
+  align-self: stretch;
+  text-align: center;
+}
