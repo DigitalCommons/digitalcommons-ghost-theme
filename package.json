@@ -80,6 +80,21 @@
                 "default": "Featured articles",
                 "group": "homepage"
             },
+            "show_tagged_pages": {
+                "type": "boolean",
+                "default": true,
+                "group": "homepage"
+            },
+            "tagged_pages_title": {
+                "type": "text",
+                "default": "Tagged",
+                "group": "homepage"
+            },
+            "tagged_pages_tag": {
+                "type": "text",
+                "default": "tagged",
+                "group": "homepage"
+            },
             "feed_title": {
                 "type": "text",
                 "default": "Latest",

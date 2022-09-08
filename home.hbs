@@ -19,6 +19,8 @@
                 {{content}}
                 <hr>
 
+                {{#if @custom.featured_title }}<h2>{{ @custom.featured_title }}</h2>{{/if}}
+                
                 <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed dc-canvas-3">
                     {{#get "pages" filter="featured:true"}}
                     {{#foreach pages}}
@@ -27,17 +29,20 @@
                     {{/get}}
                 </div>
 
-                <h2>Our Tools</h2>
+                {{#if @custom.show_tagged_pages}}
+                <h2>{{ @custom.tagged_pages_title }}</h2>
 
                 <div class="gh-feed dc-canvas-3">
-                    {{#get "pages" filter="tag:tools"}}
+                    {{#get "pages" filter=(concat "tag:" @custom.tagged_pages_tag) }}
                     {{#foreach pages}}
                         {{> "square-page"}}
                     {{/foreach}}
                     {{/get}}
                 </div>
 
-                <h2>Our News</h2>
+                {{/if}}
+
+                <h2>{{ @custom.feed_title }}</h2>
 
                 <div class="gh-feed dc-canvas-3">
                     {{#get "posts"}}
