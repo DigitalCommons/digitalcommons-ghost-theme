@@ -17,6 +17,35 @@
 
             <div class="single-content gh-content gh-canvas">
                 {{content}}
+                <hr>
+
+                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
+                    {{#get "pages" filter="featured:true"}}
+                    {{#foreach pages}}
+                        {{> "loop"}}
+                    {{/foreach}}
+                    {{/get}}
+                </div>
+
+                <h2>Our Tools</h2>
+
+                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
+                    {{#get "pages" filter="tag:tools"}}
+                    {{#foreach pages}}
+                        {{> "loop"}}
+                    {{/foreach}}
+                    {{/get}}
+                </div>
+                
+                <h2>Our News</h2>
+
+                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
+                    {{#get "posts"}}
+                    {{#foreach posts}}
+                        {{> "loop"}}
+                    {{/foreach}}
+                    {{/get}}
+                </div>
             </div>
 
             {{#is "post"}}
