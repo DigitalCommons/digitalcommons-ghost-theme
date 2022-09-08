@@ -18,6 +18,7 @@
     letter-spacing: 0.05rem;
 }
 
+/*
 .post-feed {
     margin-top: -1.5rem;
 }
@@ -29,6 +30,7 @@
 .post-feed.text-only {
     margin-top: -3rem;
 }
+*/
 
 .feed {
     position: relative;
