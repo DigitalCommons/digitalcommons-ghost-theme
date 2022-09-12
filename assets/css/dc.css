@@ -1,9 +1,15 @@
 /* Digital commons styles */
 
+/* Upcase, centre and underline titles in articles */
 article h1, article h2, article h3 {
   text-align: center;
   text-transform: uppercase;
   text-decoration: underline;
+}
+
+/* But left-align them in feeds */
+.feed-wrapper h1.feed-title, .feed-wrapper h2, .feed-wrapper h3 {
+  text-align: left;
 }
 
 .dc-canvas-3 {
