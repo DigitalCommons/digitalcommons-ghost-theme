@@ -1,0 +1,57 @@
+/* For Dropdown Menus */    
+.nav li.menu-item-has-children {
+    position: relative;
+    padding-right: 25px!important;
+    display: inline;
+}
+    
+.nav li.menu-item-has-children:hover ul.ghost-submenu {
+    visibility: visible!important;
+    opacity: 1!important;
+    top: 50px!important;
+}
+
+.nav li.menu-item-has-children svg {
+    position: absolute;
+    right: 0px;
+    top: 60%;
+    transform: translate(-0%, -50%) scale(1.1);
+}
+
+.nav ul.ghost-submenu li {
+    list-style: none;
+    white-space: nowrap;
+    margin-left: 0;
+}
+
+.nav ul.ghost-submenu {
+    border-radius: 5px;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0;
+    top: 30px;
+    transition: 0.3s;
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 14%);
+    max-width: unset !important;
+    
+    /* Edit below to adjust Dropdown Menu positioning and color */
+    margin-top: -15px;
+    padding: 5px var(--head-nav-gap) 10px var(--head-nav-gap);
+    left: calc(-0.5* var(--head-nav-gap));
+    color: inherit;
+}
+
+.nav [data-menu-label*="[subitem]"] {
+    display: none; /* hide subitems by default */
+}
+
+/*:is(.is-head-transparent, .is-head-brand) :is(.gh-search, .social-item, .menu-item, .menu-item-more) {
+    color: var(--color-white);
+}*/
+.nav ul.ghost-submenu {
+    background-color: var(--color-white);
+}
+.is-head-brand:not(.is-head-transparent) .nav ul.ghost-submenu {
+  background-color: var(--ghost-accent-color);
+}
