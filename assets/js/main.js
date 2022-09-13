@@ -66,7 +66,7 @@ function subMenu() {
         return el.nodeName.toLowerCase() == 'li';
     }
 
-    if (items.length > 5) {
+    if (false && items.length > 5) { // disable this insertion of ellipsis if > 5 menu items
         var separator = items[4];
 
         var toggle = document.createElement('button');
