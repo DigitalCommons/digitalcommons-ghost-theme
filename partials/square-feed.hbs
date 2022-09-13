@@ -1,0 +1,10 @@
+    <section class="gh-comments gh-canvas">
+        <div class="gh-feed dc-canvas-3">
+            {{#get "pages" filter="tag:{{tag}}"}}
+                {{#foreach pages}}
+                        {{> "square-page"}}
+                {{/foreach}}
+            {{/get}}
+        </div>
+    </section>
+

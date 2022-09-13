@@ -12,16 +12,8 @@
         {{/if}}
     {{/is}}
 
-    <section class="gh-comments gh-canvas">
-        <div class="gh-feed dc-canvas-3">
-            {{#get "pages" filter="tag:tools"}}
-                {{#foreach pages}}
-                        {{> "square-page"}}
-                {{/foreach}}
-            {{/get}}
-        </div>
-    </section>
-
+    {{> "square-feed" tag="tools"}}
+    
     {{#post}}
         {{#if comments}}
             <section class="gh-comments gh-canvas">
