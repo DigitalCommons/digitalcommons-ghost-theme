@@ -1,36 +1,29 @@
 @font-face {
-    font-family: Mulish;
-    font-style: normal;
-    font-weight: 400;
-    src: local(""), url("../fonts/mulish-v10-latin-regular.woff2") format("woff2"), url("../fonts/mulish-v10-latin-regular.woff") format("woff");
+  font-family: 'Century Gothic';
+  src: url('../fonts/CenturyGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: Mulish;
-    font-style: normal;
-    font-weight: 700;
-    src: local(""), url("../fonts/mulish-v10-latin-700.woff2") format("woff2"), url("../fonts/mulish-v10-latin-700.woff") format("woff");
+  font-family: 'Century Gothic';
+  src: url('../fonts/CenturyGothic-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: Mulish;
-    font-style: normal;
-    font-weight: 800;
-    src: local(""), url("../fonts/mulish-v10-latin-800.woff2") format("woff2"), url("../fonts/mulish-v10-latin-800.woff") format("woff");
+  font-family: 'Century Gothic';
+  src: url('../fonts/CenturyGothic-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: Mulish;
-    font-style: italic;
-    font-weight: 400;
-    src: local(""), url("../fonts/mulish-v10-latin-italic.woff2") format("woff2"), url("../fonts/mulish-v10-latin-italic.woff") format("woff");
-}
-
-@font-face {
-    font-family: Mulish;
-    font-style: italic;
-    font-weight: 700;
-    src: local(""), url("../fonts/mulish-v10-latin-700italic.woff2") format("woff2"), url("../fonts/mulish-v10-latin-700italic.woff") format("woff");
+  font-family: 'Century Gothic';
+  src: url('../fonts/CenturyGothic-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
 }
 
 @font-face {
