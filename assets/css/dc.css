@@ -54,3 +54,41 @@ article h1, article h2, article h3 {
   align-self: stretch;
   text-align: center;
 }
+
+.gh-foot {
+  background-color: var(--footer-background);
+  color: var(--footer-color);
+  margin-top: 9rem;
+  padding-top: 4rem;
+}
+
+.gh-foot-brand, .gh-foot-menu, .gh-powered-by {
+  display: flex;
+  align-items: center;
+}
+
+.gh-foot a {
+  color: var(--footer-color);
+}
+
+.gh-foot a:hover {
+  color: var(--footer-color);
+  filter: brightness(0.8);
+}
+
+.gh-foot-brand {
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.gh-foot-menu {
+  font-weight: bold;
+}
+
+.gh-powered-by {
+  justify-content: right;
+}
+
+.gh-foot-logo img {
+  max-height: 32px;
+}

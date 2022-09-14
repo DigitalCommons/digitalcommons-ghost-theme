@@ -120,6 +120,17 @@
                 "type": "boolean",
                 "default": true,
                 "group": "post"
+            },
+            "footer_color": {
+                "type": "color",
+                "default": "#ffffff"
+            },
+            "footer_background": {
+                "type": "color",
+                "default": "#262626"
+            },
+            "footer_logo": {
+                "type": "image"
             }
         }
     },
