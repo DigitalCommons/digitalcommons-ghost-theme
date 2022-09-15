@@ -22,9 +22,11 @@
         <h1 class="single-title">{{title}}</h1>
         
         {{#if custom_excerpt}}
+        {{#unless no_custom_excerpt }}
             <div class="single-excerpt">
                 {{custom_excerpt}}
             </div>
+        {{/unless}}
         {{/if}}
 
         {{#if feature_image}}
