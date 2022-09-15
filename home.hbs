@@ -19,38 +19,46 @@
                 {{content}}
                 <hr>
 
+                {{#get "pages" filter="featured:true"}}
+                {{#if pages}}
                 {{#if @custom.featured_title }}<h2>{{ @custom.featured_title }}</h2>{{/if}}
                 
                 <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed dc-canvas-3">
-                    {{#get "pages" filter="featured:true"}}
                     {{#foreach pages}}
                         {{> "square-page"}}
                     {{/foreach}}
-                    {{/get}}
                 </div>
+                {{/if}}
+                {{/get}}
 
                 {{#if @custom.show_tagged_pages}}
+                {{#get "pages" filter=(concat "tag:" @custom.tagged_pages_tag) }}
+                {{#if pages}}
                 <h2>{{ @custom.tagged_pages_title }}</h2>
 
                 <div class="gh-feed dc-canvas-3">
-                    {{#get "pages" filter=(concat "tag:" @custom.tagged_pages_tag) }}
                     {{#foreach pages}}
                         {{> "square-page"}}
                     {{/foreach}}
-                    {{/get}}
                 </div>
-
+                {{/if}}
+                {{/get}}
                 {{/if}}
 
+                {{#if @custom.feed_title }}
+                {{#get "posts"}}
+                {{#if posts }}
                 <h2>{{ @custom.feed_title }}</h2>
-
+                
                 <div class="gh-feed dc-canvas-3">
-                    {{#get "posts"}}
                     {{#foreach posts}}
                         {{> "square-page"}}
                     {{/foreach}}
-                    {{/get}}
                 </div>
+                {{/if}}
+                {{/get}}
+                {{/if}}
+
             </div>
 
             {{#is "post"}}
