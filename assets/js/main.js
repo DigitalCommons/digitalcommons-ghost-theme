@@ -3,10 +3,14 @@ var body = document.body;
 var timeout;
 var st = 0;
 
+// Remove no-script styles
+document.querySelectorAll('.nojs').forEach(e => e.classList.remove('nojs'))
+
 cover();
 subMenu();
 featured();
-pagination(false);
+try { pagination(false); } catch(_) {}
+hero_carousel();
 
 window.addEventListener('scroll', function () {
     'use strict';
@@ -130,4 +134,21 @@ function featured() {
             },
         },
     });
+}
+
+function hero_carousel() {
+  'use strict';
+  var feed = document.querySelector('.hero-images');
+  if (!feed) return;
+
+    tns({
+        container: feed,
+        gutter: 30,
+      autoplay: true,
+      autoplayButtonOutput: false,
+      nav: false,
+      controls: false,
+      items: 1,
+    });
+
 }

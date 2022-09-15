@@ -113,3 +113,6 @@ article h1 {
   padding: 2.5rem 0;
 }
 
+figure.nojs .hero-images > *:not(:first-child) {
+  display: none; /* By default, without JS, hide all except the first hero image. */
+}
