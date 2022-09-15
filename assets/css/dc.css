@@ -90,5 +90,14 @@ article h1, article h2, article h3 {
 }
 
 .gh-foot-logo img {
-  max-height: 32px;
+  max-height: 3.2rem;
 }
+
+.gh-head-logo img {
+  max-height: 5.6rem;
+}
+
+.gh-head-inner {
+  padding: 2.5rem 0;
+}
+
