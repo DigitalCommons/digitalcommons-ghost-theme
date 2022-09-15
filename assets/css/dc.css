@@ -64,6 +64,7 @@ article h1 {
   justify-self: stretch;
   align-self: stretch;
   text-align: center;
+  margin-top: 1.6rem;
 }
 
 .gh-foot {
