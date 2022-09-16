@@ -20,8 +20,10 @@
                   alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
                     {{#if feature_image_caption}}
                       <div class="hero-image-caption">
-                        {{#if @site.logo}}
-                        <img src="{{@site.logo}}" alt="{{@site.title}}">
+                        {{#if @custom.hero_image_logo}}
+                        <img src="{{@custom.hero_image_logo}}" alt="{{@site.title}}">
+                        {{else if @site.logo}}
+                        <img src="{{@site.logo}}" alt="{{@site.title}}">                            
                         {{/if}}
                         <span>
                           {{feature_image_caption}}
@@ -45,8 +47,10 @@
                       alt="{{title}}">
                       {{#if feature_image_caption}}
                         <div class="hero-image-caption">
-                          {{#if @site.logo}}
-                          <img src="{{@site.logo}}" alt="{{@site.title}}">
+                          {{#if @custom.hero_image_logo}}
+                          <img src="{{@custom.hero_image_logo}}" alt="{{@site.title}}">
+                          {{else if @site.logo}}
+                          <img src="{{@site.logo}}" alt="{{@site.title}}">                            
                           {{/if}}
                           <span>
                             {{feature_image_caption}}

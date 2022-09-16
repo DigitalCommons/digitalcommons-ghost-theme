@@ -129,6 +129,9 @@
                 "type": "color",
                 "default": "#262626"
             },
+            "hero_image_logo": {
+                "type": "image"
+            },
             "footer_logo": {
                 "type": "image"
             }
