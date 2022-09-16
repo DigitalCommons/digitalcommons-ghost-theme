@@ -116,3 +116,25 @@ article h1 {
 figure.nojs .hero-images > *:not(:first-child) {
   display: none; /* By default, without JS, hide all except the first hero image. */
 }
+
+.hero-image {
+  display: grid;
+  grid: 1fr / 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.hero-image > * {
+  grid-area: 1/1;
+}
+.hero-image > span {
+  grid-area: 1/1;
+  font-size: 6rem;
+  font-weight: bold;
+  min-width: 0;
+  min-height: 0;
+}
+.hero-image * {
+  color: var(--white-color);
+  text-shadow: 0 0 .5rem var(--dark-gray-color);
+}
