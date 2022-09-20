@@ -58,7 +58,7 @@ body:not(.with-full-cover) .cover {
 }
 
 .has-serif-title .cover-description {
-    font-family: var(--font-serif);
+    font-family: var(--font-serif-title);
 }
 
 .with-full-cover .cover-description {

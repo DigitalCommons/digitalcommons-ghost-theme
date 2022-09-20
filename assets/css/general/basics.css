@@ -16,8 +16,10 @@
     --twitter-color: #1da1f2;
     --rss-color: #f26522;
     --animation-base: ease-in-out;
-    --font-sans: 'Century Gothic', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
-    --font-serif: Lora, Times, serif;
+    --font-sans-body: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-serif-body: Lora, Times, serif;
+    --font-sans-title: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-serif-title: Lora, Times, serif;
     --navbar-height: 80px;
     --content-font-size: 1.7rem;
 }

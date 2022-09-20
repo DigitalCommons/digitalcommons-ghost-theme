@@ -20,7 +20,7 @@
 }
 
 .has-serif-title .featured-wrapper .post-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-serif-title);
 }
 
 .featured-title {

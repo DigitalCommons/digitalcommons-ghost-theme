@@ -25,7 +25,7 @@
 }
 
 .has-serif-title .single-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-serif-title);
 }
 
 .single-excerpt {
@@ -34,7 +34,7 @@
 }
 
 .has-serif-body .single-excerpt {
-    font-family: var(--font-serif);
+    font-family: var(--font-serif-body);
 }
 
 .single-media {
