@@ -11,6 +11,7 @@ subMenu();
 featured();
 try { pagination(false); } catch(_) {}
 hero_carousel();
+deobfuscate_mail_links();
 
 window.addEventListener('scroll', function () {
     'use strict';
@@ -151,4 +152,24 @@ function hero_carousel() {
       items: 1,
     });
 
+}
+
+// This fucntion is designed to allow obfuscated email addresses to be placed in pages.
+// This is to discourage address harvesting by spammers.
+//
+// It scans for `<span class="obfuscated-email">...</span>` tags, and replaces them with
+// email links. The text content of the span is assumed to be the email address.
+// These can be obfuscated by inserting other HTML elements,
+// e.g. `somewhere<span>@</spam>example</span>.</span>com`.
+//
+// If JS is enabled, these will get turned into links, if it isn't,
+// they stay readable but obfuscated.
+function deobfuscate_mail_links() {
+  function replacer() {
+    var node = $(this);
+    var email = node.text();
+    return '<a href="mailto:'+email+'">'+email+'</a>';
+  }
+  var nodes = $('.obfuscated-email'); // Assumes jQuery
+  nodes.replaceWith(replacer);
 }
