@@ -134,6 +134,9 @@
             },
             "footer_logo": {
                 "type": "image"
+            },
+            "linkedin_url": {
+                "type": "text"
             }
         }
     },
