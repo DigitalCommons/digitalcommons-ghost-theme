@@ -137,6 +137,15 @@
             },
             "linkedin_url": {
                 "type": "text"
+            },
+            "banner_text": {
+                "type": "text"
+            },
+            "banner_button_text": {
+                "type": "text"
+            },
+            "banner_button_url": {
+                "type": "text"
             }
         }
     },

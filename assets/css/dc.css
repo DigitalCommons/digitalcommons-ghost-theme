@@ -224,3 +224,52 @@ body {
   /* letter-spacing: -0.01em;*/
 }
 
+.dc-banner { /* home page */
+  background-color: var(--banner-color);
+  min-height: 3em;
+
+  color: var(--color-white);
+}
+.dc-banner .dc-banner-content {
+  font-family: var(--font-sans-title);
+  font-size: 2rem;
+  grid-column: main-start / main-end;
+  grid-row: 1/1;
+  justify-self: left;
+  align-self: center;
+}
+.dc-banner .dc-banner-button {
+  border: 0;
+  cursor: pointer;
+  line-height: inherit;
+  outline: none;
+  padding: 0;
+  color: var(--color-white);
+  grid-column: main-end / wide-end;
+  grid-row: 1/1;
+  justify-self: right;
+  align-self: center;
+  border-width: 0;
+  background-color: var(--brand-color);
+  color: var(--color-white);
+  height: 2em;
+  min-width: 10em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 16px -2px;
+  border-radius: 999px;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dc-banner-button:hover {
+  opacity: 0.9;
+}
+.is-head-brand .dc-banner {  /* non-home pages */
+  background-color: var(--darker-gray-color);
+  background-image: var(--banner-image);
+  background-repeat: repeat;
+  text-shadow: 0 0 0.5rem var(--darker-gray-color);
+}
+.is-head-brand .dc-banner-button {
+  background-color: var(--banner-color);
+}
