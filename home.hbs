@@ -78,7 +78,7 @@
                 
                 <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed dc-canvas-3">
                     {{#foreach pages}}
-                        {{> "square-page"}}
+                        {{> "square-page" disable_link=true}}
                     {{/foreach}}
                 </div>
                 {{/if}}
