@@ -231,24 +231,25 @@ body {
   color: var(--color-white);
 }
 .dc-info-strip .dc-info-strip-content {
-  font-family: var(--font-sans-title);
-  font-size: 2rem;
   grid-column: main-start / main-end;
   grid-row: 1/1;
-  justify-self: left;
-  align-self: center;
+  display: flex;
+  align-items: center;
 }
-.dc-info-strip .dc-info-strip-button {
+.dc-info-strip .dc-info-strip-content > span {
+  font-family: var(--font-sans-title);
+  font-size: 2rem;
+  flex: 1 1 auto;
+}
+.dc-info-strip .dc-info-strip-content > a {
+  flex: 0 0 auto;
   border: 0;
   cursor: pointer;
   line-height: inherit;
   outline: none;
   padding: 0;
   color: var(--color-white);
-  grid-column: main-end / wide-end;
-  grid-row: 1/1;
   justify-self: right;
-  align-self: center;
   border-width: 0;
   background-color: var(--brand-color);
   color: var(--color-white);

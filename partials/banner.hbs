@@ -1,17 +1,19 @@
 {{#if @custom.banner_text }}
 <div class="dc-info-strip gh-canvas">
-  <span class="dc-info-strip-content">{{ @custom.banner_text }}</span>
-  {{#if @custom.banner_button_url }}
-  <a href="{{ @custom.banner_button_url }}" class="dc-info-strip-button"
-    target="_blank" rel="noopener noreferrer">
-    <span>
-      {{#if @custom.banner_button_text }}
-      {{ @custom.banner_button_text }}
-      {{else}}
-      Click Here
-      {{/if}}
+    <span class="dc-info-strip-content">
+        <span>{{ @custom.banner_text }}</span>
+        {{#if @custom.banner_button_url }}
+        <a href="{{ @custom.banner_button_url }}" class="dc-info-strip-button"
+            target="_blank" rel="noopener noreferrer">
+            <span>
+                {{#if @custom.banner_button_text }}
+                {{ @custom.banner_button_text }}
+            {{else}}
+                Click Here
+                {{/if}}
+            </span>
+        </a>
+        {{/if}}
     </span>
-  </a>
-  {{/if}}
 </div>
 {{/if}}
