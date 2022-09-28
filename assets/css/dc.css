@@ -224,13 +224,13 @@ body {
   /* letter-spacing: -0.01em;*/
 }
 
-.dc-banner { /* home page */
+.dc-info-strip { /* home page */
   background-color: var(--banner-color);
   min-height: 3em;
 
   color: var(--color-white);
 }
-.dc-banner .dc-banner-content {
+.dc-info-strip .dc-info-strip-content {
   font-family: var(--font-sans-title);
   font-size: 2rem;
   grid-column: main-start / main-end;
@@ -238,7 +238,7 @@ body {
   justify-self: left;
   align-self: center;
 }
-.dc-banner .dc-banner-button {
+.dc-info-strip .dc-info-strip-button {
   border: 0;
   cursor: pointer;
   line-height: inherit;
@@ -261,15 +261,15 @@ body {
   align-items: center;
   justify-content: center;
 }
-.dc-banner-button:hover {
+.dc-info-strip-button:hover {
   opacity: 0.9;
 }
-.is-head-brand .dc-banner {  /* non-home pages */
+.is-head-brand .dc-info-strip {  /* non-home pages */
   background-color: var(--darker-gray-color);
   background-image: var(--banner-image);
   background-repeat: repeat;
   text-shadow: 0 0 0.5rem var(--darker-gray-color);
 }
-.is-head-brand .dc-banner-button {
+.is-head-brand .dc-info-strip-button {
   background-color: var(--banner-color);
 }
