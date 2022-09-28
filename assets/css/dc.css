@@ -65,6 +65,13 @@ article h1, article h2:not(.dc-square-page-title) {
   align-self: stretch;
   text-align: center;
   margin-top: 1.6rem;
+  
+}
+
+@media (max-width: 575px) {
+  .dc-square-page-caption {
+    font-size: 1.3rem;
+  }
 }
 
 .gh-foot {
@@ -240,7 +247,14 @@ body {
   font-family: var(--font-sans-title);
   font-size: 2rem;
   flex: 1 1 auto;
+
 }
+@media (max-width: 575px) {
+  .dc-info-strip .dc-info-strip-content > span {
+    font-size: 1.5rem;
+  }
+}
+
 .dc-info-strip .dc-info-strip-content > a {
   flex: 0 0 auto;
   border: 0;
