@@ -1,7 +1,7 @@
 {
     "name": "digitalcommons-coop",
     "description": "The digitialcommons.coop site theme, adapted from Edition",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
@@ -118,6 +118,12 @@
                 "type": "image"
             },
             "linkedin_url": {
+                "type": "text"
+            },
+            "bluesky_url": {
+                "type": "text"
+            },
+            "mastodon_url": {
                 "type": "text"
             },
             "banner_text": {
