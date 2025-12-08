@@ -13,9 +13,10 @@
     gap: 20px;
 }
 
-.gh-head-menu li:nth-child(n+6) {
+
+/*.gh-head-menu li:nth-child(n+6) {
     display: none;
-}
+}*/
 
 .menu-item-button {
     margin-left: 20px;

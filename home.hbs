@@ -1,0 +1,128 @@
+{{!< default}}
+
+<main class="site-main">
+
+    {{#page}}
+      <article class="single {{post_class}}">
+      
+      <header class="single-header gh-canvas">
+        {{#unless no_image}}
+          <figure class="kg-card kg-image-card kg-width-full nojs">
+          {{! show featured images as a carousel }}
+          <div class="hero-images">
+            {{#if feature_image}}
+              {{! always include this page's featured image if present }}
+              <div>
+                <div class="hero-image"> 
+                  <img class="kg-image" srcset="{{> "srcset"}}"
+                  sizes="(min-width: 1023px) 920px, calc(90vw)"
+                  src="{{img_url feature_image size="l"}}"
+                  alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+                    {{#if feature_image_caption}}
+                      <div class="hero-image-caption">
+                        {{#if @custom.hero_image_logo}}
+                        <img src="{{@custom.hero_image_logo}}" alt="{{@site.title}}">
+                        {{else if @site.logo}}
+                        <img src="{{@site.logo}}" alt="{{@site.title}}">                            
+                        {{/if}}
+                        <span>
+                          {{feature_image_caption}}
+                        </span>
+                      </div>
+                    {{/if}}
+                </div>
+              </div>
+            {{/if}}    
+            
+            {{! include those pages' tagged hero-image too }}
+            {{#get "pages" filter="tag:hero-image"}}
+            {{#if pages}}
+              {{#foreach pages}}
+                {{#if feature_image}}
+                  <div>
+                    <div class="hero-image"> 
+                      <img class="kg-image" srcset="{{> "srcset"}}"
+                      sizes="(min-width: 1023px) 920px, calc(90vw)"
+                      src="{{img_url feature_image size="l"}}"
+                      alt="{{title}}">
+                      {{#if feature_image_caption}}
+                        <div class="hero-image-caption">
+                          {{#if @custom.hero_image_logo}}
+                          <img src="{{@custom.hero_image_logo}}" alt="{{@site.title}}">
+                          {{else if @site.logo}}
+                          <img src="{{@site.logo}}" alt="{{@site.title}}">                            
+                          {{/if}}
+                          <span>
+                            {{feature_image_caption}}
+                          </span>
+                        </div>
+                      {{/if}}
+                    </div>
+                  </div>
+                {{/if}}
+              {{/foreach}}
+            {{/if}}
+            {{/get}} 
+          </div>
+          </figure>
+        {{/unless}}
+        
+      </header>
+      
+      <div class="single-content gh-content gh-canvas">
+                {{content}}
+
+                {{#get "pages" filter="featured:true"}}
+                {{#if pages}}
+                {{#if @custom.featured_title }}<h2>{{ @custom.featured_title }}</h2>{{/if}}
+                
+                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed dc-canvas-3">
+                    {{#foreach pages}}
+                        {{> "square-page" disable_link=true}}
+                    {{/foreach}}
+                </div>
+                {{/if}}
+                {{/get}}
+
+                {{#if @custom.show_tagged_pages}}
+                {{#get "pages" filter=(concat "tag:" @custom.tagged_pages_tag) }}
+                {{#if pages}}
+                <h2>{{ @custom.tagged_pages_title }}</h2>
+
+                <div class="gh-feed dc-canvas-3">
+                    {{#foreach pages}}
+                        {{> "square-page"}}
+                    {{/foreach}}
+                </div>
+                {{/if}}
+                {{/get}}
+                {{/if}}
+
+                {{#if @custom.feed_title }}
+                {{#get "posts"}}
+                {{#if posts }}
+                <h2>{{ @custom.feed_title }}</h2>
+                
+                <div class="gh-feed dc-canvas-3">
+                    {{#foreach posts}}
+                        {{> "square-page"}}
+                    {{/foreach}}
+                </div>
+                {{/if}}
+                {{/get}}
+                {{/if}}
+
+            </div>
+
+            {{#is "post"}}
+            <div class="gh-canvas">
+                <footer class="single-footer">
+
+                </footer>
+            </div>
+            {{/is}}
+
+        </article>
+    {{/page}}
+
+</main>

@@ -7,7 +7,13 @@
     <title>{{meta_title}}</title>
 
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
-
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <style>
+:root {
+  --footer-color: {{@custom.footer_color}};
+  --footer-background: {{@custom.footer_background}};
+}
+    </style>
     {{ghost_head}}
 </head>
 
@@ -48,6 +54,11 @@
                         {{> "icons/twitter"}}
                     </a>
                 {{/if}}
+                {{#if @custom.linkedin_url}}
+                    <a class="social-item social-item-linkedin" href="{{@custom.linkedin_url}}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        {{> "icons/linkedin"}}
+                    </a>
+                {{/if}}
             </div>
             {{#if @member}}
                 <button class="button-text menu-item members-account" data-portal="account">Account</button>
@@ -59,12 +70,7 @@
     </div>
     </header>
 
-    {{#is "home"}}
-        {{> "cover"}}
-        {{#if @custom.show_featured_posts}}
-            {{> "featured-posts"}}
-        {{/if}}
-    {{/is}}
+    {{> "banner"}}
 
     <div class="site-content">
         {{{body}}}
@@ -72,8 +78,15 @@
 
     <footer class="gh-foot gh-outer">
         <div class="gh-foot-inner gh-inner">
-            <div class="gh-copyright">
-                {{@site.title}} © {{date format="YYYY"}}
+            <div class="gh-foot-brand">
+                {{#if @custom.footer_logo}}
+                <span class="gh-foot-logo">
+                    <img src="{{@custom.footer_logo}}" alt="{{@site.title}}">
+                </span>
+                {{/if}}
+                <span class="gh-copyright">
+                    {{@site.title}} © {{date format="YYYY"}}
+                </span>
             </div>
             <nav class="gh-foot-menu">
                 {{navigation type="secondary"}}

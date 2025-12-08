@@ -1,7 +1,7 @@
 {
-    "name": "edition",
-    "description": "A clean, minimal newsletter theme for the Ghost publishing platform",
-    "version": "1.0.0",
+    "name": "digitalcommons-coop",
+    "description": "The digitialcommons.coop site theme, adapted from Edition",
+    "version": "1.1.0",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
@@ -80,6 +80,21 @@
                 "default": "Featured articles",
                 "group": "homepage"
             },
+            "show_tagged_pages": {
+                "type": "boolean",
+                "default": true,
+                "group": "homepage"
+            },
+            "tagged_pages_title": {
+                "type": "text",
+                "default": "Tagged",
+                "group": "homepage"
+            },
+            "tagged_pages_tag": {
+                "type": "text",
+                "default": "tagged",
+                "group": "homepage"
+            },
             "feed_title": {
                 "type": "text",
                 "default": "Latest",
@@ -105,6 +120,32 @@
                 "type": "boolean",
                 "default": true,
                 "group": "post"
+            },
+            "footer_color": {
+                "type": "color",
+                "default": "#ffffff"
+            },
+            "footer_background": {
+                "type": "color",
+                "default": "#262626"
+            },
+            "hero_image_logo": {
+                "type": "image"
+            },
+            "footer_logo": {
+                "type": "image"
+            },
+            "linkedin_url": {
+                "type": "text"
+            },
+            "banner_text": {
+                "type": "text"
+            },
+            "banner_button_text": {
+                "type": "text"
+            },
+            "banner_button_url": {
+                "type": "text"
             }
         }
     },

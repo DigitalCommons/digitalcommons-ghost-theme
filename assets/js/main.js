@@ -3,10 +3,15 @@ var body = document.body;
 var timeout;
 var st = 0;
 
+// Remove no-script styles
+document.querySelectorAll('.nojs').forEach(e => e.classList.remove('nojs'))
+
 cover();
 subMenu();
 featured();
-pagination(false);
+try { pagination(false); } catch(_) {}
+hero_carousel();
+deobfuscate_mail_links();
 
 window.addEventListener('scroll', function () {
     'use strict';
@@ -66,7 +71,7 @@ function subMenu() {
         return el.nodeName.toLowerCase() == 'li';
     }
 
-    if (items.length > 5) {
+    if (false && items.length > 5) { // disable this insertion of ellipsis if > 5 menu items
         var separator = items[4];
 
         var toggle = document.createElement('button');
@@ -130,4 +135,41 @@ function featured() {
             },
         },
     });
+}
+
+function hero_carousel() {
+  'use strict';
+  var feed = document.querySelector('.hero-images');
+  if (!feed) return;
+
+    tns({
+        container: feed,
+        gutter: 30,
+      autoplay: true,
+      autoplayButtonOutput: false,
+      nav: false,
+      controls: false,
+      items: 1,
+    });
+
+}
+
+// This fucntion is designed to allow obfuscated email addresses to be placed in pages.
+// This is to discourage address harvesting by spammers.
+//
+// It scans for `<span class="obfuscated-email">...</span>` tags, and replaces them with
+// email links. The text content of the span is assumed to be the email address.
+// These can be obfuscated by inserting other HTML elements,
+// e.g. `somewhere<span>@</spam>example</span>.</span>com`.
+//
+// If JS is enabled, these will get turned into links, if it isn't,
+// they stay readable but obfuscated.
+function deobfuscate_mail_links() {
+  function replacer() {
+    var node = $(this);
+    var email = node.text();
+    return '<a href="mailto:'+email+'">'+email+'</a>';
+  }
+  var nodes = $('.obfuscated-email'); // Assumes jQuery
+  nodes.replaceWith(replacer);
 }

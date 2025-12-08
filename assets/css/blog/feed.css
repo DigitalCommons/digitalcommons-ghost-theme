@@ -18,6 +18,7 @@
     letter-spacing: 0.05rem;
 }
 
+/*
 .post-feed {
     margin-top: -1.5rem;
 }
@@ -29,6 +30,7 @@
 .post-feed.text-only {
     margin-top: -3rem;
 }
+*/
 
 .feed {
     position: relative;
@@ -148,7 +150,7 @@
 }
 
 .has-serif-title .feed-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-serif-title);
 }
 
 .feed-excerpt {
@@ -162,7 +164,7 @@
 }
 
 .has-serif-body .feed-excerpt {
-    font-family: var(--font-serif);
+    font-family: var(--font-serif-body);
 }
 
 .post-feed:not(.expanded) .feed-excerpt {

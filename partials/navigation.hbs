@@ -1,0 +1,8 @@
+<ul class="nav">
+  {{#foreach navigation}}
+    <li
+      class="{{link_class for=(url) class=(concat "nav-" slug)}}" data-menu-label="{{label}}">
+      <a href="{{url absolute="true"}}">{{label}}</a>
+    </li>
+  {{/foreach}}
+</ul>
