@@ -57,24 +57,6 @@
                 ],
                 "default": "Modern sans-serif"
             },
-            "email_signup_text": {
-                "type": "text",
-                "group": "homepage"
-            },
-            "publication_cover_style": {
-                "type": "select",
-                "options": [
-                    "Fullscreen",
-                    "Half screen"
-                ],
-                "default": "Fullscreen",
-                "group": "homepage"
-            },
-            "show_featured_posts": {
-                "type": "boolean",
-                "default": true,
-                "group": "homepage"
-            },
             "featured_title": {
                 "type": "text",
                 "default": "Featured articles",
